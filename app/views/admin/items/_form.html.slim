@@ -1,0 +1,12 @@
+.pure-u-1.window
+  h2 Item
+  = simple_form_for resource, url: url do |f|
+    = f.input :description, label: "Descrição"
+    = f.input :price, label: "Preço"
+    = f.input :image, label: "Imagem"
+    br
+    = f.button :submit, value: "Salvar"
+    | &nbsp;
+    = link_to "Cancelar", admin_items_path
+    br
+    br

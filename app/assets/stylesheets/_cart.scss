@@ -1,0 +1,48 @@
+.cart, .window {
+  background-color: white;
+  width: 80%;
+  border-top: 6px solid #35b91e;
+  box-sizing: border-box;
+  padding: 5px 20px;
+  margin: 20px auto;
+  display: block;
+  border-radius: 2px;
+  border-color: rgb(253, 63, 63);
+  float: none;
+}
+
+.cart .control-links {
+  display: block;
+  text-align: right;
+}
+
+.cart .control-links a {
+  margin-left: 20px;
+}
+
+.cart .pure-button {
+  background: #f84239;
+}
+
+.cart td.values {
+  text-align: right;
+  font-size: 12px;
+}
+
+.cart td.total {
+  color: #f84239;
+  font-size: 14px;
+}
+
+.cart tfoot {
+  border-top: 1px solid #eee;
+}
+
+.cart tfoot td {
+  padding-top: 10px;
+}
+
+.cart tfoot td.total {
+  font-size: 18px;
+  color: #35b91e;
+}

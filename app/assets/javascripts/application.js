@@ -13,3 +13,10 @@
 //= require jquery
 //= require jquery_ujs
 //= require_tree .
+//= require_self
+
+$(function(){
+  setTimeout(function(){
+    $(".flash").fadeOut(200);
+  }, 2000);
+});

@@ -1,0 +1,23 @@
+.item {
+  text-align: center;
+  padding: 20px 40px;
+  box-sizing: border-box;
+}
+
+.item-wrapper {
+  border-top: 6px solid #35b91e;
+  display: inline-block;
+  padding-bottom: 20px;
+  width: 100%;
+  box-sizing: border-box;
+  background-color: white;
+  border-radius: 2px;
+  box-shadow: 0 0 3px #aaa;
+}
+
+.item:nth-child(even) .item-wrapper {
+  border-color: rgb(253, 63, 63);
+  .pure-button {
+    background-color: #f84239;
+  }
+}

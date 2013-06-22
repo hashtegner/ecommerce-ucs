@@ -1,0 +1,7 @@
+tr
+  td = item.id
+  td = image_tag item.image, width: 50
+  td = link_to item.description, edit_resource_path(item)
+  td = number_to_currency item.price
+  td
+    = link_to "x", resource_path(item), data: {method: "delete", confirm: "Confirma exclusão?"}

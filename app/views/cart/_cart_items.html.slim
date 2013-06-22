@@ -1,0 +1,15 @@
+table
+  tfoot
+    tr
+      td colspan="3"
+      td.values
+        | Total a pagar =
+      td.total = number_to_currency @cart.total
+  tbody
+    = render partial: "cart_item", collection: @cart.items
+
+br
+
+.control-links
+  = link_to "Continuar Comprando", root_path
+  = link_to "Finalizar Pedido", "", class: "pure-button pure-button-success"

@@ -1,0 +1,14 @@
+tr
+  td = cart_item_counter + 1
+  td = image_tag cart_item.item.image, width: 80
+  td = cart_item.item.description
+  td.values
+    = cart_item.quantity
+    | &nbsp; x &nbsp;
+    = number_to_currency cart_item.price
+    | &nbsp; =
+  td.total
+    = number_to_currency cart_item.total_item
+
+  td
+    = link_to "x", remove_cart_item_path(cart_item.item)

@@ -1,0 +1,21 @@
+doctype 5
+html lang="pt-BR"
+  head
+    title Ecommerce UCS
+    = stylesheet_link_tag "application", media: "all"
+    = csrf_meta_tags
+  body
+
+    .pure-g.content
+      .pure-u-1.menu
+        .pure-menu.pure-menu-open.pure-menu-horizontal
+          ul
+            li = link_to "Loja", root_path
+            li = link_to "Items", admin_root_path
+
+      .pure-u-1
+        = render "shared/flash"
+
+      = yield
+
+    = javascript_include_tag "application"

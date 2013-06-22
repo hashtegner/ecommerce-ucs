@@ -1,0 +1,8 @@
+.pure-u-1.cart
+  h1 Carrinho
+
+  - unless @cart.items.empty?
+    = render partial: "cart_items", cart: @cart
+  - else
+    = render partial: "empty"
+  br
