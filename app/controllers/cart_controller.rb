@@ -8,9 +8,9 @@ class CartController < ApplicationController
   end
 
   def add_item
-    @cart = Cart.add_item(cart_session_id, params[:id])
+    Cart.add_item(cart_session_id, params[:id])
 
-    respond_with @cart, location: cart_path
+    respond_with true, location: cart_path
   end
 
   def remove_item
