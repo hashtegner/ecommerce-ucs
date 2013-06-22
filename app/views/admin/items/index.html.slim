@@ -1,6 +1,7 @@
 .pure-u-1.buttons-bar
   = link_to "Adicionar item", new_resource_path, class: "pure-button pure-button-success"
 .pure-u-1.window
+  h2 Itens
   table
     tbody
       = render partial: "item", collection: collection

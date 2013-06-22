@@ -4,4 +4,4 @@
     = image_tag item.image, width: 100
     h2 = number_to_currency item.price
 
-    = link_to "Comprar", add_cart_item_path(item), class: "pure-button pure-button-success"
+    = link_to "Comprar", add_cart_item_path(item), class: "pure-button pure-button-success", data: {method: "post"}

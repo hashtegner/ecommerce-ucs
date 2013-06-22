@@ -19,4 +19,9 @@ $(function(){
   setTimeout(function(){
     $(".flash").fadeOut(200);
   }, 2000);
+
+  $(document).on("click", ".finish", function(e){
+    e.preventDefault();
+    alert("Sua versão demo expirou! :)")
+  })
 });

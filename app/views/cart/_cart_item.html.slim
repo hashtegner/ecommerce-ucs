@@ -11,4 +11,4 @@ tr
     = number_to_currency cart_item.total_item
 
   td
-    = link_to "x", remove_cart_item_path(cart_item.item)
+    = link_to "x", remove_cart_item_path(cart_item.item), data: {method: "post"}

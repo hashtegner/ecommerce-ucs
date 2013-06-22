@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130622134332) do
+ActiveRecord::Schema.define(version: 20130622202007) do
 
   create_table "items", force: true do |t|
     t.string   "description", null: false
@@ -35,15 +35,31 @@ ActiveRecord::Schema.define(version: 20130622134332) do
   add_index "order_items", ["order_id"], name: "index_order_items_on_order_id", using: :btree
 
   create_table "orders", force: true do |t|
-    t.string   "session_id",               null: false
-    t.string   "status",     default: "o", null: false
+    t.string   "session_id",                  null: false
+    t.string   "status",     default: "open", null: false
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "user_id"
   end
 
   add_index "orders", ["session_id"], name: "index_orders_on_session_id", unique: true, using: :btree
 
+  create_table "users", force: true do |t|
+    t.string   "email",         null: false
+    t.string   "login",         null: false
+    t.string   "password_hash", null: false
+    t.string   "password_salt", null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "users", ["email", "login"], name: "index_users_on_email_and_login", unique: true, using: :btree
+  add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
+  add_index "users", ["login"], name: "index_users_on_login", unique: true, using: :btree
+
   add_foreign_key "order_items", "items", :name => "order_items_item_id_fk"
   add_foreign_key "order_items", "orders", :name => "order_items_order_id_fk"
+
+  add_foreign_key "orders", "users", :name => "orders_user_id_fk"
 
 end

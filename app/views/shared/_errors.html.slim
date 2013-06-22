@@ -1,0 +1,5 @@
+- unless record.errors.empty?
+  p.resource-errors
+    - record.errors.full_messages.each do |m|
+      = m
+      br

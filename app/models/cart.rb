@@ -36,4 +36,13 @@ class Cart
     items.collect(&:total_item).reduce(:+)
   end
 
+  def as_json(arg)
+    {
+      cart: {
+        total: total,
+        items: items
+      }
+    }
+  end
+
 end

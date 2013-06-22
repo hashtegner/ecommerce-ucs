@@ -1,4 +1,10 @@
 GIT
+  remote: git://github.com/alesshh/simple_auth.git
+  revision: 27a0d60bc300b8a0dc90d69fd7ad5893dfbc4697
+  specs:
+    simple_auth (1.4.5)
+
+GIT
   remote: git://github.com/josevalim/inherited_resources.git
   revision: 2656ca0cea51cc7469be1d30cace24752d5b4e3b
   specs:
@@ -160,7 +166,9 @@ DEPENDENCIES
   pure-css-rails
   rails (= 4.0.0.rc2)
   rails_12factor
+  responders
   sass-rails (~> 4.0.0.rc2)
+  simple_auth!
   simple_form (>= 3.0.0.rc)
   slim
   therubyracer

@@ -6,8 +6,10 @@ gem "pg"
 gem "foreigner"
 
 gem "slim"
+gem "responders"
 gem "inherited_resources", github: "josevalim/inherited_resources"
 gem "simple_form", ">= 3.0.0.rc"
+gem "simple_auth", github: "alesshh/simple_auth"
 
 
 group :assets do

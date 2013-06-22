@@ -205,3 +205,8 @@ pt-BR:
   activerecord:
     errors:
       <<: *errors
+
+
+  simple_auth:
+    sessions:
+      invalid_credentials: Usuário e/ou senha inválido(s)
