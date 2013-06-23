@@ -1,6 +1,5 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
-  responders :flash, :http_cache
 
   before_filter :authenticate_admin, if: :require_admin_login
   include InheritedResources::DSL
