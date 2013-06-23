@@ -1,6 +1,4 @@
 class CartController < ApplicationController
-  self.responder = AppResponder
-  respond_to :html ,:json
   require_logged_user only: :finish
 
   def index

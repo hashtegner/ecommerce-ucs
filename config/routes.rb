@@ -6,7 +6,7 @@ EcommerceUcs::Application.routes.draw do
     resources :items, except: :show
   end
 
-  resources :items, only: :index
+  resources :items, only: [:index, :show]
 
   controller :cart do
     get "cart", action: :index, as: :cart
